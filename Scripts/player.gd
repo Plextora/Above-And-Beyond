@@ -24,7 +24,7 @@ func _physics_process(delta):
 	transform.origin.x = clamp(transform.origin.x, -15, 15)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
-	#shooting
+	#haha, bullet go BRRR
 	if Input.is_action_pressed("ui_accept") and cooldown <= 0:
 		cooldown = COOLDOWN * delta
 		for i in guns:
@@ -33,6 +33,6 @@ func _physics_process(delta):
 			bullet.transform = i.global_transform
 			bullet.velo = bullet.transform.basis.z * -600
 			
-	#cooldown
+	#boom, big shaq
 	if cooldown > 0:
 		cooldown -= delta
